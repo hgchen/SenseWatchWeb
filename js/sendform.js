@@ -14,7 +14,7 @@ $(document).ready(function() {
 		var data = {};
 		data.name = $("#name").val();
 		data.email = $("#email").val();
-		data.area = $("#phone").val();
+		data.phone = $("#phone").val();
 		data.comments = $("#message").val();
 
 		var comment = new CommentObject();
