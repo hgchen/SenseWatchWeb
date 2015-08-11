@@ -26,13 +26,14 @@ $(document).ready(function() {
 				success:function() {
 					console.log("Success");
 					//Alerts are lame - but quick and easy
-					// alert("Thanks for filling the form!");
+					alert("Thanks for filling the form!");
 				},
 				error:function(e) {
 					console.dir(e);
 				}
 			});
 		} else {
+			alert("Please enter your name and email!");
 			console.log("Fail");
 		}
 
