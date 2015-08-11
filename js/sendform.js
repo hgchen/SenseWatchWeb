@@ -11,10 +11,13 @@ $(document).ready(function() {
 		//add error handling here
 		//gather the form data
 
-		if $("#name").val() != "" && $("#email").val() != "" {
+		var name = $("#name").val();
+		var email = $("#email").val();
+
+		if (name != "" && email != "") {
 			var data = {};
-			data.name = $("#name").val();
-			data.email = $("#email").val();
+			data.name = name;
+			data.email = email;
 			data.phone = $("#phone").val();
 			data.comments = $("#message").val();
 
