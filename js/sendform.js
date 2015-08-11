@@ -11,23 +11,30 @@ $(document).ready(function() {
 		//add error handling here
 		//gather the form data
 
-		var data = {};
-		data.name = $("#name").val();
-		data.email = $("#email").val();
-		data.phone = $("#phone").val();
-		data.comments = $("#message").val();
+		var name = $("#name").val();
+		var email = $("#email").val();
 
-		var comment = new CommentObject();
-		comment.save(data, {
-			success:function() {
-				console.log("Success");
-				//Alerts are lame - but quick and easy
-				alert("Thanks for filling the form!");
-			},
-			error:function(e) {
-				console.dir(e);
-			}
-		});
+		if name != "" && email != "" {
+			var data = {};
+			data.name = $("#name").val();
+			data.email = $("#email").val();
+			data.phone = $("#phone").val();
+			data.comments = $("#message").val();
+
+			var comment = new CommentObject();
+			comment.save(data, {
+				success:function() {
+					console.log("Success");
+					//Alerts are lame - but quick and easy
+					// alert("Thanks for filling the form!");
+				},
+				error:function(e) {
+					console.dir(e);
+				}
+			});
+		} else {
+			console.log("Fail");
+		}
 
 	});
 
